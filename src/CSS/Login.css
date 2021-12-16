@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@635&display=swap');
+
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+  font-family: 'Signika', sans-serif;
+}
+
+.login > img {
+  width: 100%;
+}
+
+.login > a {
+  padding: 15px 20px;
+  border-radius: 99px;
+  background-color: #ff64c9cf;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
