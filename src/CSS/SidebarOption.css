@@ -9,7 +9,12 @@
 
 .sidebarOption:hover {
   color: white;
+}
 
+.sidebarOption > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
 }
 
 .sidebarOption_icon {
@@ -21,4 +26,5 @@
   margin-left: 10px;
   padding: 5px;
   font-size: 15px;
+  opacity: 0.8;
 }

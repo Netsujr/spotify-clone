@@ -18,7 +18,11 @@ const Player = ({ spotify }) => {
           <br />
           <strong className="sidebar_title">PLAYLISTS</strong>
           <hr />
-        </Sidebar>
+
+          <SideBarOption title='Hip Hop'/>
+          <SideBarOption title='Rock'/>
+          <SideBarOption title='Country'/>
+    </Sidebar>
         <Body>
           <h1>Im the Body</h1>
         </Body>
@@ -65,7 +69,12 @@ const Sidebar = styled.div`
     height: 60px;
     padding: 10px;
     margin-right: auto;
+  }
 
+  hr {
+    border: 1px solid #282828;
+    width: 90%;
+    margin: 10px auto;
   }
   `
 const Footer = styled.div`
