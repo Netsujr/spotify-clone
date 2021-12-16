@@ -5,6 +5,7 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
+  token: null,
 };
 
 const reducer = (state, action) => {
@@ -19,6 +20,14 @@ const reducer = (state, action) => {
         user: action.user,
         //update case here
       };
+
+    case 'SET_TOKEN':
+      return {
+        ...state,
+        token: action.token,
+      };
+
+
     default:
       return state;
     // default should return something so app doesnt break

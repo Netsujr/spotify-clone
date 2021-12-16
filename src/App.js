@@ -3,24 +3,26 @@ import './App.css';
 import Login from './Login';
 import { getTokenFromUrl } from "./spotify";
 import { SpotifyWebApi } from "spotify-web-api-js";
-import Player from './components/player';
-import { useDataLayerValue } from "./components/dataLayer";
+import Player from './Player';
+import { useDataLayerValue } from "./DataLayer";
 
 const spotify = new SpotifyWebApi();
 
-
 function App() {
-  const [token, setToken] = useState(null);
   //{ } is what we need fromthe dataLayer, dispatch is what we are sending over there
-  const [{ user }, dispatch] = useDataLayerValue();
+  const [{ user, token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
-    let _token = hash.access_token;
+    const _token = hash.access_token;
 
     if (_token) {
-      setToken(_token);
+
+      dispatch({
+        type: "SET_TOKEN",
+        token: _token
+      });
 
       spotify.setAccessToken(_token);
 
@@ -33,7 +35,7 @@ function App() {
         });
       });
     };
-    console.log(token)
+    console.log(token);
   }, []);
 
   console.log(user)
@@ -43,6 +45,6 @@ function App() {
       {token ? (<Player />) : (<Login />)}
     </div>
   );
-}
+};
 
 export default App;

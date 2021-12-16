@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { DataLayer } from "./components/dataLayer"
+import { DataLayer } from "./DataLayer"
 import reducer, { initialState } from "./reducer"
 
 
