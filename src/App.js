@@ -35,10 +35,8 @@ function App() {
         });
       });
     };
-    console.log(token);
   }, []);
 
-  console.log(user)
 
   return (
     <div className="App">
