@@ -12,8 +12,8 @@ const spotify = new SpotifyWebApi();
 function App() {
   const [token, setToken] = useState(null);
   //{ } is what we need fromthe dataLayer, dispatch is what we are sending over there
-  const [{}, dispatch] = useDataLayerValue();
-  
+  const [{ user }, dispatch] = useDataLayerValue();
+
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
@@ -25,10 +25,15 @@ function App() {
       spotify.setAccessToken(_token);
 
       spotify.getMe().then((user) => {
-        console.log(user);
+
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+
+        })
       })
     }
-
+    console.log(token)
   }, []);
 
 
