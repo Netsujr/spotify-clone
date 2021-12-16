@@ -27,6 +27,13 @@ const reducer = (state, action) => {
         ...state,
         token: action.token,
       };
+
+    case 'SET_PLAYLISTS':
+      return {
+        ...state,
+        playlists: action.playlists,
+      };
+      
     default:
       return state;
     // default should return something so app doesnt break

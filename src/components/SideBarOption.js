@@ -1,6 +1,5 @@
 import React from 'react';
 import "../CSS/SidebarOption.css"
-import styled from "styled-components"
 // Icon is capital because its an external component we a bringin into project
 function SideBarOption({ title, Icon }) {
   return (
