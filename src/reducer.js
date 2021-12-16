@@ -10,7 +10,7 @@ export const initialState = {
 
 const reducer = (state, action) => {
   console.log(action);
-  //action -> type, [payload]
+  // action -> type, [payload]
   // dispatch the action, actiong has a type (user, playlist etc..)
   switch (action.type) {
     case 'SET_USER':
@@ -20,14 +20,11 @@ const reducer = (state, action) => {
         user: action.user,
         //update case here
       };
-
     case 'SET_TOKEN':
       return {
         ...state,
         token: action.token,
       };
-
-
     default:
       return state;
     // default should return something so app doesnt break
