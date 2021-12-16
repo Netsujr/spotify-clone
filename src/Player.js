@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import SideBarOption from "./components/SideBarOption";
+import HomeIcon from "@material-ui/icons/Home"
+import SearchIcon from "@material-ui/icons/Search"
+import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
+
 
 const Player = ({ spotify }) => {
   return (
@@ -7,7 +12,9 @@ const Player = ({ spotify }) => {
       <PlayerBody>
         <Sidebar>
           <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="" />
-          <h1>Im the sidebar</h1>
+          <SideBarOption Icon={HomeIcon} title="Home" />
+          <SideBarOption Icon={SearchIcon} title="Search" />
+          <SideBarOption Icon={LibraryMusicIcon} title="Your Library" />
         </Sidebar>
         <Body>
           <h1>Im the Body</h1>
@@ -50,9 +57,12 @@ const Sidebar = styled.div`
   min-width: 230px;
   padding: 0px 10px;
 
-  &:img {
+  img {
     object-fit: contain;
-    height: 70px;
+    height: 60px;
+    padding: 10px;
+    margin-right: auto;
+
   }
   `
 const Footer = styled.div`
