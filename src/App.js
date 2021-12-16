@@ -3,8 +3,8 @@ import './App.css';
 import Login from './Login';
 import { getTokenFromUrl } from "./spotify";
 import { SpotifyWebApi } from "spotify-web-api-js";
-import Player from './components/Player';
-import { useDataLayerValue } from "./components/DataLayer";
+import Player from './components/player';
+import { useDataLayerValue } from "./components/dataLayer";
 
 const spotify = new SpotifyWebApi();
 
@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
-    const _token = hash.access_token;
+    let _token = hash.access_token;
 
     if (_token) {
       setToken(_token);
@@ -30,20 +30,17 @@ function App() {
           type: 'SET_USER',
           user: user,
 
-        })
-      })
-    }
+        });
+      });
+    };
     console.log(token)
   }, []);
 
+  console.log(user)
 
   return (
     <div className="App">
-      {
-        token ? (<Player />) : (
-          <Login />
-        )
-      }
+      {token ? (<Player />) : (<Login />)}
     </div>
   );
 }

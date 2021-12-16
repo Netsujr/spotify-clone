@@ -1,7 +1,3 @@
-//spotify's API to authenticate user with their real spotify profile.
-
-import { isValidInputTimeValue } from "@testing-library/user-event/dist/utils";
-
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 const redirectUri = "http://localhost:3000/";
 const clientId = "c6b852adaa3c481ea8ef2158f328c33b";
@@ -31,4 +27,3 @@ export const getTokenFromUrl = () => {
 
   }, {});
 }
-

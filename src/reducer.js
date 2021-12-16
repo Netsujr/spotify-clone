@@ -1,8 +1,10 @@
+// import { findAllByDisplayValue } from "@testing-library/react";
+
 export const initialState = {
   user: null,
-  playlist: [],
+  playlists: [],
   playing: false,
-  item: null
+  item: null,
 };
 
 const reducer = (state, action) => {
@@ -14,12 +16,12 @@ const reducer = (state, action) => {
       return {
         //keep what was in the current state
         ...state,
-        user: action.user
+        user: action.user,
         //update case here
-      }
-      default:
-        // default should return something so app doesnt break
+      };
+    default:
       return state;
+    // default should return something so app doesnt break
   }
 }
 
