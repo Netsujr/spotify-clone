@@ -28,7 +28,7 @@
   flex: 0.4;
   max-width: 300px;
   padding: 0 100px;
-  color: white;
+  color: #ffd2efcf;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,6 +53,7 @@
   width: 60px;
   margin-right: 20px;
   object-fit: contain;
+  border-radius: 5px;
 }
 
 .footer__songInfo > h4 {
