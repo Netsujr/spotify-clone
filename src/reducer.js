@@ -8,6 +8,7 @@ export const initialState = {
   top_artists: null,
   playing: false,
   item: null,
+  token: null,
     // stay logged in for debugging
   // "BQDUfmV7QjUR0gHxEZzR_wyiixsUd6NnMtG_wEp-qG8b674fr3YyCjWR1mQcWAUTL8Mt3ERa5ieYG7-v2Tzt7hY305dHDBLAkAgxfnulTgfKswuVnsWNoGD2VhMph2WoOBGHxkxYVxu01BBR2kgUlk7kEHPoDiz3cQ",
 };

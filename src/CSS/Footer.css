@@ -10,7 +10,7 @@
 }
 
 .footer__right * .MuiSlider-root {
-  color: green;
+  color: #ff64c9cf;
 }
 .footer__left {
   display: flex;
@@ -20,8 +20,8 @@
   flex: 0.3;
 }
 
-.footer__green {
-  color: #1ed15e;
+.footer__pink {
+  color: #ff64c9cf;
 }
 
 .footer__center {
@@ -35,7 +35,7 @@
 }
 
 .footer__icon:hover,
-.footer__green:hover {
+.footer__pink:hover {
   transition: transform 0.2s ease-in-out;
   transform: scale(1.2) !important;
 }
