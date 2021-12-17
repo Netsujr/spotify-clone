@@ -5,10 +5,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 // import { getTokenFromResponse } from "./spotify";
 import { useDataLayerValue } from "../DataLayer";
+import "../CSS/Sidebar.css"
 
 
 function Sidebar() {
-  const [{ playlists }, dispatch] = useDataLayerValue();
+  const [ { playlists } ] = useDataLayerValue();
   console.log(playlists);
 
   return (
