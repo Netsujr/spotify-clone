@@ -7,7 +7,8 @@ export const initialState = {
   item: null,
   // REMOVE AFTER DEVELOPMENT
   // REMOVE AFTER DEVELOPMENT >>>>> CHange back to null
-  token: "BQDUfmV7QjUR0gHxEZzR_wyiixsUd6NnMtG_wEp-qG8b674fr3YyCjWR1mQcWAUTL8Mt3ERa5ieYG7-v2Tzt7hY305dHDBLAkAgxfnulTgfKswuVnsWNoGD2VhMph2WoOBGHxkxYVxu01BBR2kgUlk7kEHPoDiz3cQ",
+  token: null,
+  // "BQDUfmV7QjUR0gHxEZzR_wyiixsUd6NnMtG_wEp-qG8b674fr3YyCjWR1mQcWAUTL8Mt3ERa5ieYG7-v2Tzt7hY305dHDBLAkAgxfnulTgfKswuVnsWNoGD2VhMph2WoOBGHxkxYVxu01BBR2kgUlk7kEHPoDiz3cQ",
 };
 
 const reducer = (state, action) => {
@@ -33,7 +34,7 @@ const reducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
-      
+
     default:
       return state;
     // default should return something so app doesnt break
