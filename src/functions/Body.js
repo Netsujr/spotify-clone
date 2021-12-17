@@ -2,7 +2,7 @@ import React from "react";
 import "../CSS/Body.css";
 import Header from "./Header";
 import { useDataLayerValue } from "../DataLayer";
-// import SongRow from "./SongRow";
+import SongRow from "./SongRow";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
@@ -70,6 +70,7 @@ function Body({ spotify }) {
           <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
         </div>
+        
       </div>
     </div>
   );
