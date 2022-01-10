@@ -14,7 +14,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log(action);
+  // console.log(action);
   // action -> type, [payload]
   // dispatch the action, actiong has a type (user, playlist etc..)
   switch (action.type) {
